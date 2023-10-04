@@ -1,7 +1,7 @@
 class Job < ApplicationRecord
     AVAILABLE = "Available".freeze 
     NOT_AVAILABLE = "Not_Available".freeze 
-    AVAILABILITY = [Available, NOT_AVAILABLE].freeze
+    AVAILABILITY = [AVAILABLE, NOT_AVAILABLE].freeze
 
     REMOTE_TEMPORARY = "Remote_Temporary".freeze
     REMOTE_PERMANENT = "Remote_Permanent".freeze

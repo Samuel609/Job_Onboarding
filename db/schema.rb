@@ -17,12 +17,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_04_065112) do
   create_table "applications", force: :cascade do |t|
     t.string "status", null: false
     t.date "deadline", null: false
-    t.bigint "users_id", null: false
-    t.bigint "jobs_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "job_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["jobs_id"], name: "index_applications_on_jobs_id"
-    t.index ["users_id"], name: "index_applications_on_users_id"
+    t.index ["job_id"], name: "index_applications_on_job_id"
+    t.index ["user_id"], name: "index_applications_on_user_id"
   end
 
   create_table "contact_informations", force: :cascade do |t|
@@ -45,10 +45,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_04_065112) do
     t.integer "highest_salary", null: false
     t.string "criteria", null: false
     t.string "logo", null: false
-    t.bigint "contact_informations_id", null: false
+    t.bigint "contact_information_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["contact_informations_id"], name: "index_jobs_on_contact_informations_id"
+    t.index ["contact_information_id"], name: "index_jobs_on_contact_information_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -61,12 +61,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_04_065112) do
     t.string "name", null: false
     t.string "email", null: false
     t.string "password_digest", null: false
-    t.bigint "contact_informations_id", null: false
-    t.bigint "roles_id", null: false
+    t.bigint "contact_information_id", null: false
+    t.bigint "role_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["contact_informations_id"], name: "index_users_on_contact_informations_id"
-    t.index ["roles_id"], name: "index_users_on_roles_id"
+    t.index ["contact_information_id"], name: "index_users_on_contact_information_id"
+    t.index ["role_id"], name: "index_users_on_role_id"
   end
 
 end

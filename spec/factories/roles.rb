@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :role do
-    name { Role::EMPLOYEE }
+    name { Role::EMPLOYER }
     
   end
 end

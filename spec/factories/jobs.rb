@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :job do
     title { Faker::Lorem.word }
-    category { JOb::Stem }
-    availability { Job::Available }
-    type { Job::Onsight_Permanent }
+    category { Job::STEM }
+    availability { Job::AVAILABLE }
+    type { Job::ONSIGHT_PERMANENT }
     description { Faker::Lorem.sentence }
     cv { Faker::Lorem.sentence }
     lowest_salary { 1 }

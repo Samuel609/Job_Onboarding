@@ -12,7 +12,7 @@ class CreateJobs < ActiveRecord::Migration[7.0]
       t.integer :highest_salary, null: false
       t.string :criteria, null: false
       t.string :logo, null: false
-      t.references :contact_informations, null: false
+      t.references :contact_information, null: false
 
       t.timestamps
     end
