@@ -16,7 +16,7 @@ class Job < ApplicationRecord
 
     belongs_to :contact_information
     validates :lowest_salary, :highest_salary, numericality: { greater_than: 0 }
-    validates :title, :category, :availability, :type, :description, :cv, :lowest_salary, :highest_salary, :criteria, :logo, :contact_informations, presence: true
+    validates :title, :category, :availability, :type, :description, :cv, :lowest_salary, :highest_salary, :criteria, :logo, presence: true
     validates :availability, inclusion: {in: AVAILABILITY}
     validates :type, inclusion: {in: TYPE}
     validates :category, inclusion: {in: CATEGORY}

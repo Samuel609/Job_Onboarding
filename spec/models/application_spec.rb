@@ -1,5 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Application, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  attributes = [
+    {user: :belong_to},
+    {job: :belong_to},
+    {deadline: %i[presence] },
+    {status: [:presence, {inclusion: [[:in_array, Application::STATUS]]}]},
+  ]
+  
+  include_examples('model_shared_spec', :application, attributes)
 end

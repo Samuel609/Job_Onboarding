@@ -8,7 +8,7 @@ class Application < ApplicationRecord
 
     STATUS = [ACCEPTED,PENDING,REJECTED].freeze
 
-    validates :user, :job, :status, :deadline, presence: true
+    validates :status, :deadline, presence: true
     validates :status, inclusion: {in: STATUS}
 
 end
