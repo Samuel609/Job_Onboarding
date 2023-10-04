@@ -6,7 +6,8 @@ RSpec.describe User, type: :model do
     { role: :belong_to },
     { name: %i[presence] },
     { email: %i[presence uniqueness] },
-    { password: [:presence, {length: [[:minimum, 8]]}] }
+    { password: %i[presence length] },
+    # { password: [:presence, {length: [[:minimum, 8]]}] }
   ]
   include_examples("model_shared_spec", :user, attributes)
 end

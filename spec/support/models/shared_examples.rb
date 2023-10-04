@@ -1,6 +1,7 @@
 VALIDATIONS = {
   presence: 'validate_presence_of',
   uniqueness: 'validate_uniqueness_of',
+  length: 'validate_length_of',
   numericality: 'validate_numericality_of',
   inclusion: 'validate_inclusion_of',
   belong_to: 'belong_to',
